@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aminoácidos adaptativos · V2</title>
+  <meta name="description" content="Prototipo V2: aminoácidos adaptativos con conectores frágiles, eventos y energías por atributo." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="stage-panel" aria-label="Campo de aminoácidos adaptativos">
+      <div class="field-frame">
+        <svg id="field" viewBox="0 0 1200 760" role="img" aria-labelledby="fieldTitle fieldDesc">
+          <title id="fieldTitle">Aminoácidos adaptativos V2</title>
+          <desc id="fieldDesc">Cinco nodos interactivos conectados por cadenas frágiles. Los eventos surgen sobre los conectores y se estabilizan usando energías de cada aminoácido.</desc>
+          <g id="backgroundLayer"></g>
+          <g id="connectorLayer"></g>
+          <g id="eventLayer"></g>
+          <g id="nodeLayer"></g>
+          <g id="overlayLayer"></g>
+        </svg>
+      </div>
+    </section>
+
+    <aside class="control-panel" aria-label="Controles del prototipo">
+      <header class="panel-header">
+        <p class="eyebrow">Prototipo V2</p>
+        <h1>Aminoácidos adaptativos</h1>
+        <p class="lead">Sostén una cadena frágil. Los eventos aparecen sobre los conectores; selecciona un aminoácido y aplica su energía donde la red esté fallando.</p>
+      </header>
+
+      <section class="metrics" aria-label="Indicadores">
+        <article class="metric metric-stability">
+          <span>Estabilidad</span>
+          <strong id="stabilityValue">0%</strong>
+          <i><b id="stabilityBar"></b></i>
+        </article>
+        <article class="metric metric-energy">
+          <span>Energía</span>
+          <strong id="energyValue">0%</strong>
+          <i><b id="energyBar"></b></i>
+        </article>
+        <article class="metric metric-collapse">
+          <span>Colapso</span>
+          <strong id="collapseValue">0%</strong>
+          <i><b id="collapseBar"></b></i>
+        </article>
+      </section>
+
+      <section class="readout" aria-live="polite">
+        <span>Lectura inmediata</span>
+        <p id="readoutText">Arrastra nodos para tensar o estabilizar la red. Haz clic en un aminoácido para seleccionar su energía.</p>
+      </section>
+
+      <section class="selected-card" id="selectedCard">
+        <span class="selected-label">Energía seleccionada</span>
+        <strong id="selectedName">Ninguna</strong>
+        <p id="selectedEffect">Selecciona un nodo y luego haz clic sobre un conector o evento.</p>
+      </section>
+
+      <section class="actions">
+        <button id="spawnEventBtn" type="button">Generar evento</button>
+        <button id="energyBtn" type="button">Recargar energía</button>
+        <button id="challengeBtn" type="button">Reto corto</button>
+        <button id="resetBtn" type="button">Reiniciar</button>
+      </section>
+
+      <footer class="legend" id="legend"></footer>
+    </aside>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
