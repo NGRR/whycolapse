@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>¿Por qué colapsan las organizaciones? | Marcelo Lasagna</title>
+  <meta name="description" content="Landing page editorial para el libro ¿Por qué colapsan las organizaciones? de Marcelo Lasagna.">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.23.12/dist/css/uikit.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.12/dist/js/uikit.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.12/dist/js/uikit-icons.min.js" defer></script>
+
+  <style>
+    :root{
+      --blue:#0066ff;
+      --navy:#002b55;
+      --deep:#001c38;
+      --orange:#ff5a00;
+      --ivory:#f3efe8;
+      --paper:#fffaf2;
+      --stone:#d9d5ce;
+      --ink:#0b2038;
+      --muted:#607286;
+      --line:rgba(0,43,85,.18);
+    }
+
+    html{scroll-behavior:smooth;}
+    body{
+      background:var(--ivory);
+      color:var(--ink);
+      font-family:Inter,Arial,Helvetica,sans-serif;
+      line-height:1.45;
+    }
+    body:before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      z-index:-1;
+      background:
+        radial-gradient(circle at 18% 8%,rgba(0,102,255,.08),transparent 28%),
+        radial-gradient(circle at 90% 12%,rgba(255,90,0,.08),transparent 22%),
+        linear-gradient(rgba(0,0,0,.025) 1px,transparent 1px);
+      background-size:auto,auto,100% 13px;
+      mix-blend-mode:multiply;
+      opacity:.8;
+    }
+
+    .uk-navbar-container:not(.uk-navbar-transparent){background:transparent;}
+    .protea-wrap{padding-left:clamp(22px,5vw,72px);padding-right:clamp(22px,5vw,72px);}
+    .protea-logo{width:152px;height:auto;}
+    .protea-nav a{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:var(--navy)!important;}
+
+    .protea-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:12px;
+      min-height:0;
+      padding:15px 22px;
+      border:1px solid var(--navy);
+      border-radius:2px;
+      background:var(--navy);
+      color:#fff!important;
+      font-size:11px;
+      font-weight:850;
+      letter-spacing:.12em;
+      line-height:1;
+      text-transform:uppercase;
+      box-shadow:0 12px 30px rgba(0,43,85,.18);
+    }
+    .protea-btn:hover{text-decoration:none;background:#003969;color:#fff!important;}
+    .protea-btn-muted{background:transparent;color:var(--navy)!important;box-shadow:none;}
+    .protea-btn-muted:hover{background:rgba(0,43,85,.06);color:var(--navy)!important;}
+    .protea-btn-orange{background:var(--orange);border-color:var(--orange);color:#fff!important;}
+    .protea-btn-orange:hover{background:#e95100;color:#fff!important;}
+    .protea-pill{border-radius:40px;padding:14px 26px;}
+
+    .protea-eyebrow{color:var(--orange);text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:900;margin:0 0 18px;}
+    .protea-rule{width:42px;height:2px;background:var(--orange);margin:0 0 28px;}
+    .protea-serif{font-family:Georgia,'Times New Roman',serif;font-weight:500;letter-spacing:-.04em;}
+    .protea-title{color:var(--deep);line-height:.95;font-size:clamp(48px,5.7vw,94px);}
+    .protea-heading{color:var(--deep);line-height:1;font-size:clamp(36px,4vw,64px);}
+    .protea-section-title{font-size:18px;letter-spacing:.22em;text-transform:uppercase;color:var(--navy);font-weight:900;margin:0 0 8px;}
+    .protea-section-rule{width:30px;height:2px;background:var(--orange);margin:0 auto 34px;}
+    .protea-lead{font-size:clamp(21px,2vw,30px);line-height:1.25;color:var(--navy);}
+    .protea-text{color:#263c55;}
+
+    .hero{min-height:760px;position:relative;overflow:hidden;}
+    .hero:after{
+      content:"";
+      position:absolute;
+      right:-12vw;
+      top:80px;
+      width:68vw;
+      height:68vw;
+      max-width:880px;
+      max-height:880px;
+      background:url('assets/spiral-blue.jpeg') center/contain no-repeat;
+      opacity:.30;
+      mix-blend-mode:multiply;
+      z-index:0;
+    }
+    .hero > *{position:relative;z-index:1;}
+    .book-stage{position:relative;min-height:620px;display:grid;place-items:center;}
+    .book-stage:before{
+      content:"";
+      position:absolute;
+      bottom:42px;
+      left:4%;
+      right:0;
+      height:110px;
+      background:linear-gradient(165deg,#a59c90,#f1ece2 55%,#8b8177);
+      clip-path:polygon(8% 0,93% 12%,100% 76%,4% 100%,0 36%);
+      filter:drop-shadow(0 20px 30px rgba(0,28,56,.18));
+      opacity:.85;
+    }
+    .book-stage img.book{width:min(460px,80%);filter:drop-shadow(0 44px 52px rgba(0,28,56,.26));transform:translateY(-12px);}
+    .side-index{position:absolute;right:0;top:18%;display:grid;gap:18px;color:var(--navy);font-size:11px;text-transform:uppercase;letter-spacing:.1em;font-weight:900;}
+    .side-index span{display:flex;align-items:center;gap:12px;}
+    .side-index i{width:38px;height:38px;border:1px solid rgba(0,43,85,.42);border-radius:50%;display:grid;place-items:center;font-style:normal;color:var(--orange);}
+
+    .paper{background:rgba(255,250,242,.78);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+    .card-paper{border:1px solid var(--line);background:var(--paper);box-shadow:none;}
+    .card-ivory{border:1px solid var(--line);background:var(--ivory);box-shadow:none;}
+    .protea-number{display:block;color:var(--orange);font-size:13px;text-transform:uppercase;letter-spacing:.14em;margin-bottom:20px;font-weight:900;}
+    .shift-card{min-height:310px;border:1px solid var(--line);background:var(--paper);display:grid;place-items:center;text-align:center;padding:34px;}
+    .shift-card img{height:180px;object-fit:contain;opacity:.72;filter:grayscale(1) contrast(1.15);}
+    .shift-card h3,.icon-card h3{letter-spacing:.12em;text-transform:uppercase;color:var(--navy);font-weight:800;}
+    .shift-arrow{font-size:44px;color:var(--orange);}
+
+    .icon-card{border:1px solid var(--line);background:rgba(255,250,242,.54);padding:24px 16px;min-height:250px;}
+    .icon-card img{width:116px;height:116px;object-fit:cover;margin:0 auto 18px;filter:grayscale(1) contrast(1.2);}
+    .icon-card h3{font-size:13px;line-height:1.25;}
+    .icon-card p{color:#4e6073;font-size:14px;}
+
+    .author-dark{background:linear-gradient(135deg,var(--deep),var(--navy));color:#fff;position:relative;overflow:hidden;}
+    .author-dark:after{content:"";position:absolute;inset:auto -120px -180px auto;width:420px;height:420px;background:url('assets/system-node.png') center/contain no-repeat;opacity:.16;}
+    .author-dark > *{position:relative;z-index:1;}
+    .portrait{width:100%;height:100%;object-fit:cover;object-position:center top;}
+    .quote-box{display:flex;align-items:center;padding:58px;font-size:clamp(32px,3.8vw,58px);line-height:1.08;color:var(--navy);}
+    .quote-box em{color:var(--orange);font-style:normal;}
+
+    .test-section{background:linear-gradient(135deg,var(--deep),var(--navy));color:#fff;position:relative;overflow:hidden;}
+    .test-section:after{content:"";position:absolute;right:-80px;top:-120px;width:520px;height:520px;background:url('assets/system-node.png') center/contain no-repeat;opacity:.14;}
+    .test-section > *{position:relative;z-index:1;}
+    .test-panel{border:1px solid rgba(255,255,255,.25);padding:34px;background:rgba(255,255,255,.06);}
+    .avatar{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--orange));margin-bottom:22px;}
+
+    .newsletter-form .uk-input{height:54px;border-color:var(--line);background:white;color:var(--ink);}
+    .footer{background:linear-gradient(135deg,var(--deep),var(--navy));color:#dce8f5;}
+    .footer a{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#dce8f5!important;}
+
+    @media (max-width:960px){
+      .protea-pill{display:none;}
+      .book-stage{min-height:520px;}
+      .side-index{display:none;}
+      .shift-arrow{transform:rotate(90deg);}
+      .portrait{max-height:520px;}
+    }
+  </style>
+</head>
+<body>
+  <main class="uk-overflow-hidden">
+    <nav class="uk-navbar-container protea-wrap" uk-navbar>
+      <div class="uk-navbar-left">
+        <a class="uk-navbar-item uk-logo uk-padding-remove-left" href="#"><img class="protea-logo" src="assets/logo-protea.webp" alt="Protea"></a>
+      </div>
+      <div class="uk-navbar-right protea-nav">
+        <ul class="uk-navbar-nav uk-visible@m">
+          <li><a href="#libro">El libro</a></li>
+          <li><a href="#problema">El problema</a></li>
+          <li><a href="#autor">Autor</a></li>
+          <li><a href="#eventos">Eventos</a></li>
+          <li><a href="#test">Test</a></li>
+        </ul>
+        <a class="protea-btn protea-pill uk-margin-left" href="#comprar">Comprar libro →</a>
+      </div>
+    </nav>
+
+    <section id="libro" class="hero protea-wrap uk-flex uk-flex-middle uk-section-large">
+      <div class="uk-grid-large uk-flex-middle" uk-grid>
+        <div class="uk-width-1-2@m">
+          <p class="protea-eyebrow">Nuevo libro de Marcelo Lasagna</p>
+          <div class="protea-rule"></div>
+          <h1 class="protea-serif protea-title uk-margin-medium-bottom">La estabilidad es la muerte silenciosa</h1>
+          <p class="protea-lead uk-margin-medium-bottom">¿Por qué las organizaciones colapsan aunque todo parezca funcionar?</p>
+          <p class="protea-text uk-text-large uk-margin-medium-bottom">Un libro sobre complejidad, adaptabilidad e innovación en tiempos donde el entorno cambia más rápido que nuestra capacidad de respuesta.</p>
+          <p class="uk-text-bold uk-text-uppercase uk-letter-spacing uk-margin-medium-bottom" style="color:var(--navy);letter-spacing:.12em;">Marcelo Lasagna<br><span class="uk-text-small">Fundador de Protea Becoming Adaptive</span></p>
+          <div class="uk-flex uk-flex-wrap uk-flex-middle uk-grid-small" uk-grid>
+            <div><a class="protea-btn protea-btn-orange" href="#eventos">Reservar plaza presentación →</a></div>
+            <div><a class="protea-btn protea-btn-muted" href="#comprar">Comprar libro →</a></div>
+          </div>
+        </div>
+        <div class="uk-width-1-2@m">
+          <div class="book-stage">
+            <img class="book" src="assets/book-mockup.png" alt="Libro ¿Por qué colapsan las organizaciones?">
+            <div class="side-index">
+              <span><i>✶</i>Adaptabilidad</span>
+              <span><i>✺</i>Complejidad</span>
+              <span><i>✦</i>Innovación</span>
+              <span><i>△</i>Estrategia</span>
+              <span><i>☍</i>Inteligencia orgánica</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="problema" class="paper uk-section-large protea-wrap">
+      <div class="uk-grid-large uk-flex-bottom uk-margin-large-bottom" uk-grid>
+        <div class="uk-width-2-5@m">
+          <p class="protea-eyebrow">El problema</p>
+          <h2 class="protea-serif protea-heading">Muchas organizaciones no colapsan por falta de estrategia.</h2>
+        </div>
+        <div class="uk-width-3-5@m">
+          <p class="uk-text-large" style="font-size:22px;color:var(--navy);">Colapsan porque detectan demasiado tarde los cambios, aprenden demasiado lento, coordinan mal la complejidad, y siguen diseñadas para un mundo que ya no existe.</p>
+        </div>
+      </div>
+      <div class="uk-child-width-1-4@m uk-child-width-1-2@s uk-grid-small uk-grid-match" uk-grid>
+        <div><article class="uk-card uk-card-body card-paper"><span class="protea-number">01</span><p class="uk-text-large">detectan demasiado tarde los cambios,</p></article></div>
+        <div><article class="uk-card uk-card-body card-paper"><span class="protea-number">02</span><p class="uk-text-large">aprenden demasiado lento,</p></article></div>
+        <div><article class="uk-card uk-card-body card-paper"><span class="protea-number">03</span><p class="uk-text-large">coordinan mal la complejidad,</p></article></div>
+        <div><article class="uk-card uk-card-body card-paper"><span class="protea-number">04</span><p class="uk-text-large">y siguen diseñadas para un mundo que ya no existe.</p></article></div>
+      </div>
+    </section>
+
+    <section id="idea-central" class="uk-section-large protea-wrap">
+      <div class="uk-grid-large uk-flex-middle" uk-grid>
+        <div class="uk-width-1-2@m">
+          <div class="uk-grid-small uk-flex-middle uk-child-width-expand@m" uk-grid>
+            <div><div class="shift-card"><img src="assets/icons-system.png" alt="Mecánica"><h3>Mecánica</h3></div></div>
+            <div class="uk-width-auto@m uk-text-center"><div class="shift-arrow">→</div></div>
+            <div><div class="shift-card"><img src="assets/spiral-blue.jpeg" alt="Sistema complejo adaptativo"><h3>Sistema complejo adaptativo</h3></div></div>
+          </div>
+        </div>
+        <div class="uk-width-1-2@m">
+          <p class="protea-eyebrow">Idea central del libro</p>
+          <h2 class="protea-serif protea-heading uk-margin-medium-bottom">Las organizaciones no son máquinas.</h2>
+          <p class="uk-text-large">Son sistemas vivos expuestos a incertidumbre, interdependencia y transformación permanente.</p>
+          <p class="uk-text-large">Este libro propone abandonar la lógica de estabilidad y comprender cómo cultivar capacidades adaptativas para sostener vigencia en entornos complejos.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="temas" class="paper uk-section-large protea-wrap uk-text-center">
+      <h2 class="protea-section-title">Qué encontrarás en el libro</h2>
+      <div class="protea-section-rule"></div>
+      <div class="uk-child-width-1-6@l uk-child-width-1-3@m uk-child-width-1-2@s uk-grid-small uk-grid-match" uk-grid>
+        <div><article class="icon-card"><img src="assets/icons-adaptabilidad.jpg" style="object-position:0% 0" alt="Complejidad"><h3>Complejidad y colapso organizacional</h3><p>Lectura sistémica del deterioro adaptativo.</p></article></div>
+        <div><article class="icon-card"><img src="assets/icons-adaptabilidad.jpg" style="object-position:25% 0" alt="Adaptabilidad"><h3>Adaptabilidad como ventaja competitiva</h3><p>Capacidad de respuesta, aprendizaje y evolución.</p></article></div>
+        <div><article class="icon-card"><img src="assets/icons-adaptabilidad.jpg" style="object-position:75% 100%" alt="Organizaciones mecánicas"><h3>El error de las organizaciones mecánicas</h3><p>Cuando la estabilidad impide leer el entorno.</p></article></div>
+        <div><article class="icon-card"><img src="assets/icons-adaptabilidad.jpg" style="object-position:100% 0" alt="Inteligencia adaptativa"><h3>Inteligencia adaptativa</h3><p>Comprender, orientar, decidir, actuar y evolucionar.</p></article></div>
+        <div><article class="icon-card"><img src="assets/icons-adaptabilidad.jpg" style="object-position:100% 100%" alt="Innovación"><h3>Innovación en contextos inciertos</h3><p>Innovar cuando el entorno cambia más rápido que la planificación.</p></article></div>
+        <div><article class="icon-card"><img src="assets/icons-system.png" alt="Casos reales"><h3>Casos reales en Europa y América Latina</h3><p>Experiencias de transformación pública y privada.</p></article></div>
+      </div>
+    </section>
+
+    <section id="autor" class="uk-grid-collapse uk-child-width-1-2@m" uk-grid>
+      <div>
+        <div class="author-dark uk-padding-large uk-height-1-1">
+          <p class="protea-eyebrow">Sobre el autor</p>
+          <h2 class="protea-serif uk-heading-medium uk-margin-medium-bottom">Marcelo Lasagna</h2>
+          <p>PhD (c) en Ciencias Políticas.</p>
+          <p>Fundador de Protea Becoming Adaptive y cofundador de Lead To Change Chile.</p>
+          <p>Desde hace más de 30 años acompaña procesos de transformación e innovación en organizaciones públicas y privadas de Europa y América Latina.</p>
+          <p>Especialista en sistemas complejos adaptativos aplicados a organizaciones.</p>
+          <a class="protea-btn protea-btn-muted uk-margin-top" style="color:white!important;border-color:white;" href="#">LinkedIn →</a>
+        </div>
+      </div>
+      <div>
+        <div class="uk-grid-collapse uk-child-width-1-2@m uk-height-1-1" uk-grid>
+          <div><img class="portrait" src="assets/marcelo-lasagna.jpeg" alt="Marcelo Lasagna"></div>
+          <div class="quote-box protea-serif">“La adaptabilidad no es una opción. Es la única ventaja <em>sostenible</em>.”</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="eventos" class="uk-section-large protea-wrap" style="background:var(--paper);">
+      <div class="uk-flex uk-flex-between uk-flex-bottom uk-flex-wrap uk-grid-small uk-margin-large-bottom" uk-grid>
+        <div>
+          <p class="protea-eyebrow">Presentaciones del libro</p>
+          <h2 class="protea-serif protea-heading">Próximas presentaciones</h2>
+        </div>
+        <div><a class="protea-btn" href="#">Ver calendario →</a></div>
+      </div>
+      <div class="uk-child-width-1-3@m uk-grid-small uk-grid-match" uk-grid>
+        <div><article class="uk-card uk-card-body card-ivory"><span class="protea-number">Casa del Libro</span><h3 class="uk-card-title" style="color:var(--navy);">2 de julio · 19:00</h3><p>Conversación sobre complejidad, adaptabilidad y organizaciones.</p><hr><p class="uk-text-small">Lugar por confirmar · Aforo limitado</p><a class="protea-btn protea-btn-orange" href="#">Reservar plaza →</a></article></div>
+        <div><article class="uk-card uk-card-body card-ivory"><span class="protea-number">Barcelona</span><h3 class="uk-card-title" style="color:var(--navy);">Fecha por confirmar</h3><p>Presentación y conversación con comunidad, prensa y organizaciones.</p><hr><p class="uk-text-small">Aforo por definir</p><a class="protea-btn protea-btn-muted" href="#">Inscripción próxima →</a></article></div>
+        <div><article class="uk-card uk-card-body card-ivory"><span class="protea-number">Santiago</span><h3 class="uk-card-title" style="color:var(--navy);">Fecha por confirmar</h3><p>Encuentro sobre innovación adaptativa, labs e IAO.</p><hr><p class="uk-text-small">Aforo por definir</p><a class="protea-btn protea-btn-muted" href="#">Inscripción próxima →</a></article></div>
+      </div>
+    </section>
+
+    <section id="test" class="test-section uk-section-large protea-wrap">
+      <div class="uk-grid-large uk-flex-middle" uk-grid>
+        <div class="uk-width-3-5@m">
+          <p class="protea-eyebrow">Experiencia interactiva</p>
+          <h2 class="protea-serif protea-heading uk-light">¿Tu organización está entrando en obsolescencia adaptativa?</h2>
+          <p class="uk-text-large">Hacer el test rápido y descubre tu nivel de riesgo.</p>
+          <a class="protea-btn protea-btn-orange" href="#">Hacer test →</a>
+        </div>
+        <div class="uk-width-2-5@m">
+          <div class="test-panel">
+            <p>Esta sección puede conectarse después con:</p>
+            <ul class="uk-list uk-list-disc">
+              <li>IAO,</li>
+              <li>newsletter,</li>
+              <li>lead generation,</li>
+              <li>workshops,</li>
+              <li>consultoría,</li>
+              <li>comunidad.</li>
+            </ul>
+            <p>Esta sección puede multiplicar muchísimo la conversión.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="apoyos" class="uk-section-large protea-wrap">
+      <p class="protea-eyebrow">Testimonios / apoyos</p>
+      <h2 class="protea-serif protea-heading">Máximo 3. Empresarial, académico, institucional.</h2>
+      <div class="uk-child-width-1-3@m uk-grid-small uk-grid-match uk-margin-large-top" uk-grid>
+        <div><article class="uk-card uk-card-body card-paper"><div class="avatar"></div><blockquote class="protea-serif uk-text-large">“Una lectura necesaria para comprender la adaptabilidad organizacional.”</blockquote><p class="uk-text-meta uk-text-uppercase">Batet · Apoyo editorial</p></article></div>
+        <div><article class="uk-card uk-card-body card-paper"><div class="avatar"></div><blockquote class="protea-serif uk-text-large">“Una mirada útil para equipos que deben decidir en incertidumbre.”</blockquote><p class="uk-text-meta uk-text-uppercase">Jordi Marín · Apoyo editorial</p></article></div>
+        <div><article class="uk-card uk-card-body card-paper"><div class="avatar"></div><blockquote class="protea-serif uk-text-large">“El libro conecta complejidad, innovación y gestión con precisión.”</blockquote><p class="uk-text-meta uk-text-uppercase">Oscar · Apoyo editorial</p></article></div>
+      </div>
+    </section>
+
+    <section id="comunidad" class="uk-section-large protea-wrap" style="background:var(--paper);">
+      <div class="uk-grid-large uk-flex-middle" uk-grid>
+        <div class="uk-width-1-2@m">
+          <p class="protea-eyebrow">Newsletter / comunidad</p>
+          <h2 class="protea-serif protea-heading">El efecto Colibrí</h2>
+          <p class="uk-text-large">Reflexiones sobre complejidad, adaptabilidad e innovación en tiempos inciertos.</p>
+        </div>
+        <div class="uk-width-1-2@m">
+          <form class="newsletter-form uk-grid-small" uk-grid>
+            <div class="uk-width-expand@s"><input class="uk-input" type="email" placeholder="correo" aria-label="correo"></div>
+            <div class="uk-width-auto@s"><button class="protea-btn protea-btn-orange" type="button">Unirme →</button></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contacto" class="footer protea-wrap uk-padding uk-flex uk-flex-between uk-flex-middle uk-flex-wrap uk-grid-small" uk-grid>
+      <div><img class="protea-logo" src="assets/logo-protea.webp" alt="Protea"></div>
+      <div class="uk-flex uk-flex-wrap uk-grid-small footer" uk-grid>
+        <div><a href="#libro">libro</a></div>
+        <div><a href="#eventos">eventos</a></div>
+        <div><a href="https://www.protea.blue/">Protea</a></div>
+        <div><a href="#">LinkedIn</a></div>
+        <div><a href="#contacto">contacto</a></div>
+        <div><a href="#">prensa/media kit</a></div>
+      </div>
+      <div class="uk-text-small uk-text-right@m">Promover el libro · Captar comunidad · Abrir puertas a conferencias, labs e IAO</div>
+    </footer>
+  </main>
+</body>
+</html>

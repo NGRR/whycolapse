@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>¿Por qué colapsan las organizaciones? | Marcelo Lasagna</title>
+  <meta name="description" content="Landing page editorial para el libro ¿Por qué colapsan las organizaciones? de Marcelo Lasagna.">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.21.16/dist/css/uikit.min.css">
+  <style>
+    :root{
+      --azul:#0066ff;
+      --azul-2:#0037a6;
+      --azul-profundo:#001f3f;
+      --naranja:#ff5a00;
+      --marfil:#f3efe8;
+      --papel:#fbfaf7;
+      --grafito:#1c1f22;
+      --gris:#d9d5ce;
+    }
+    html{scroll-behavior:smooth;}
+    body{background:var(--marfil); color:var(--azul-profundo);}
+    h1,h2,h3,h4,.uk-navbar-nav>li>a{color:var(--azul-profundo);}
+    a{color:var(--azul-profundo);}
+    ::selection{background:var(--azul); color:#fff;}
+  </style>
+</head>
+<body>
+
+<header uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky uk-box-shadow-small; offset: 0">
+  <nav class="uk-navbar-container uk-navbar-transparent uk-padding-small" uk-navbar style="background:rgba(243,239,232,.93); backdrop-filter:blur(10px);">
+    <div class="uk-navbar-left">
+      <a class="uk-navbar-item uk-logo" href="#inicio" aria-label="Protea Becoming Adaptive">
+        <img src="assets/logo.webp" alt="Protea Becoming Adaptive" width="150" height="auto">
+      </a>
+    </div>
+    <div class="uk-navbar-center uk-visible@m">
+      <ul class="uk-navbar-nav">
+        <li><a href="#problema">El problema</a></li>
+        <li><a href="#paradigma">Paradigma</a></li>
+        <li><a href="#libro">El libro</a></li>
+        <li><a href="#presentaciones">Presentaciones</a></li>
+        <li><a href="#test">Test</a></li>
+        <li><a href="#autor">Autor</a></li>
+      </ul>
+    </div>
+    <div class="uk-navbar-right">
+      <a class="uk-button uk-button-primary uk-border-pill uk-visible@s" href="#presentaciones" style="background:var(--azul-profundo); color:#fff;">Reservar plaza</a>
+      <a class="uk-navbar-toggle uk-hidden@m" uk-navbar-toggle-icon href="#menu" uk-toggle></a>
+    </div>
+  </nav>
+</header>
+
+<div id="menu" uk-offcanvas="overlay: true">
+  <div class="uk-offcanvas-bar" style="background:var(--azul-profundo);">
+    <button class="uk-offcanvas-close" type="button" uk-close></button>
+    <ul class="uk-nav uk-nav-default uk-margin-large-top">
+      <li><a href="#problema">El problema</a></li>
+      <li><a href="#paradigma">Paradigma</a></li>
+      <li><a href="#libro">El libro</a></li>
+      <li><a href="#presentaciones">Presentaciones</a></li>
+      <li><a href="#test">Test</a></li>
+      <li><a href="#autor">Autor</a></li>
+      <li><a href="#comunidad">Comunidad</a></li>
+    </ul>
+  </div>
+</div>
+
+<main id="inicio">
+
+  <section class="uk-section uk-section-large uk-position-relative uk-overflow-hidden" style="min-height:94vh; background:linear-gradient(90deg, rgba(243,239,232,.98) 0%, rgba(243,239,232,.91) 48%, rgba(243,239,232,.68) 100%), url('assets/white-organic-spiral.webp') right center / contain no-repeat;">
+    <div class="uk-container uk-container-expand uk-padding-large">
+      <div class="uk-grid-large uk-flex-middle" uk-grid>
+        <div class="uk-width-1-2@m">
+          <p class="uk-text-meta uk-text-uppercase uk-text-bold uk-margin-small-bottom" style="color:var(--naranja); letter-spacing:.12em;">Nuevo libro de Marcelo Lasagna</p>
+          <h1 class="uk-heading-large uk-margin-remove-top" style="font-size:clamp(3rem,7.6vw,7.4rem); line-height:.9; letter-spacing:-.055em;">La estabilidad es la muerte silenciosa</h1>
+          <h2 class="uk-h1 uk-margin-medium-top" style="max-width:900px;">¿Por qué las organizaciones colapsan aunque todo parezca funcionar?</h2>
+          <p class="uk-text-lead uk-width-5-6@m">Un libro sobre complejidad, adaptabilidad e innovación en tiempos donde el entorno cambia más rápido que nuestra capacidad de respuesta.</p>
+          <p class="uk-text-bold uk-margin-medium-top">Marcelo Lasagna<br><span class="uk-text-muted">Fundador de Protea Becoming Adaptive</span></p>
+          <div class="uk-flex uk-flex-wrap uk-grid-small uk-margin-medium-top" uk-grid>
+            <div><a href="#presentaciones" class="uk-button uk-button-primary uk-button-large" style="background:var(--azul-profundo); color:#fff;">Reservar plaza presentación</a></div>
+            <div><a href="#test" class="uk-button uk-button-default uk-button-large">Hacer test adaptativo</a></div>
+            <div><a href="#libro" class="uk-button uk-button-text uk-button-large">Explorar la hipótesis</a></div>
+          </div>
+        </div>
+        <div class="uk-width-1-2@m uk-text-center">
+          <div class="uk-inline">
+            <img src="assets/book-mockup.webp" alt="Mockup del libro ¿Por qué colapsan las organizaciones?" style="max-height:720px; object-fit:contain; filter:drop-shadow(0 32px 60px rgba(0,31,63,.28));">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="problema" class="uk-section uk-section-large" style="background:#fff;">
+    <div class="uk-container">
+      <div class="uk-grid-large" uk-grid>
+        <div class="uk-width-1-3@m">
+          <p class="uk-text-meta uk-text-uppercase uk-text-bold" style="color:var(--naranja); letter-spacing:.12em;">Lo que ya está ocurriendo</p>
+          <h2 class="uk-heading-medium">Muchas organizaciones no colapsan por falta de estrategia.</h2>
+          <p class="uk-text-lead">Colapsan porque su capacidad de respuesta llega después que el cambio.</p>
+        </div>
+        <div class="uk-width-2-3@m">
+          <div class="uk-child-width-1-2@s uk-grid-small uk-grid-match" uk-grid>
+            <div>
+              <div class="uk-card uk-card-body uk-height-1-1" style="background:linear-gradient(rgba(243,239,232,.94), rgba(243,239,232,.94)), url('assets/white-helix.webp') center / cover no-repeat; border-left:3px solid var(--naranja);">
+                <h3 class="uk-h4">Detectan demasiado tarde los cambios</h3>
+                <p>Las señales ya están en el entorno, pero la organización todavía lee la realidad desde indicadores del ciclo anterior.</p>
+              </div>
+            </div>
+            <div>
+              <div class="uk-card uk-card-body uk-height-1-1" style="background:linear-gradient(rgba(243,239,232,.94), rgba(243,239,232,.94)), url('assets/white-leaf.webp') center / cover no-repeat; border-left:3px solid var(--naranja);">
+                <h3 class="uk-h4">Aprenden demasiado lento</h3>
+                <p>El conocimiento existe, pero no logra convertirse a tiempo en decisión, coordinación ni transformación efectiva.</p>
+              </div>
+            </div>
+            <div>
+              <div class="uk-card uk-card-body uk-height-1-1" style="background:linear-gradient(rgba(243,239,232,.94), rgba(243,239,232,.94)), url('assets/white-frame.webp') center / cover no-repeat; border-left:3px solid var(--naranja);">
+                <h3 class="uk-h4">Coordinan mal la complejidad</h3>
+                <p>Áreas, equipos y liderazgos operan como piezas aisladas frente a problemas interdependientes.</p>
+              </div>
+            </div>
+            <div>
+              <div class="uk-card uk-card-body uk-height-1-1" style="background:linear-gradient(rgba(243,239,232,.94), rgba(243,239,232,.94)), url('assets/white-organic-spiral.webp') center / cover no-repeat; border-left:3px solid var(--naranja);">
+                <h3 class="uk-h4">Siguen diseñadas para un mundo que ya no existe</h3>
+                <p>Su arquitectura mental, organizacional y cultural responde a una estabilidad que dejó de ser el punto de partida.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="paradigma" class="uk-section uk-section-large uk-light uk-position-relative uk-overflow-hidden" style="background:linear-gradient(90deg, rgba(0,31,63,.96), rgba(0,102,255,.78)), url('assets/blue-helix.webp') right center / contain no-repeat;">
+    <div class="uk-container">
+      <div class="uk-grid-large uk-flex-middle" uk-grid>
+        <div class="uk-width-1-2@m">
+          <p class="uk-text-meta uk-text-uppercase uk-text-bold" style="color:#ffb070; letter-spacing:.12em;">Cambio de paradigma</p>
+          <h2 class="uk-heading-medium">Las organizaciones no son máquinas.</h2>
+          <p class="uk-text-lead">Son sistemas vivos expuestos a incertidumbre, interdependencia y transformación permanente.</p>
+          <p>Este libro propone abandonar la lógica de estabilidad y comprender cómo cultivar capacidades adaptativas para sostener vigencia en entornos complejos.</p>
+        </div>
+        <div class="uk-width-1-2@m">
+          <div class="uk-grid-small uk-child-width-1-2" uk-grid>
+            <div>
+              <div class="uk-card uk-card-body uk-height-1-1" style="background:rgba(0,31,63,.74); border:1px solid rgba(255,255,255,.22);">
+                <span uk-icon="icon: cog; ratio: 3"></span>
+                <h3 style="color:#fff;">Mecánica</h3>
+                <p class="uk-text-small">Control, repetición, estabilidad y eficiencia local.</p>
+              </div>
+            </div>
+            <div>
+              <div class="uk-card uk-card-body uk-height-1-1" style="background:rgba(255,90,0,.92); color:#fff; border:1px solid rgba(255,255,255,.22);">
+                <span uk-icon="icon: world; ratio: 3"></span>
+                <h3 style="color:#fff;">Sistema complejo adaptativo</h3>
+                <p class="uk-text-small">Lectura, aprendizaje, coordinación y evolución.</p>
+              </div>
+            </div>
+          </div>
+          <div class="uk-margin-top uk-text-center">
+            <img src="assets/adaptive-icons.webp" alt="Anticipación, agilidad, aprendizaje, adecuación y antifragilidad" style="max-height:360px; opacity:.96; background:#fff; padding:18px;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="uk-section uk-section-large" style="background:var(--papel);">
+    <div class="uk-container">
+      <div class="uk-text-center uk-margin-large-bottom">
+        <p class="uk-text-meta uk-text-uppercase uk-text-bold" style="color:var(--naranja); letter-spacing:.12em;">Capacidades adaptativas</p>
+        <h2 class="uk-heading-medium">Un mapa para sostener vigencia en entornos complejos</h2>
+      </div>
+      <div class="uk-child-width-1-5@m uk-child-width-1-2@s uk-grid-small uk-grid-match" uk-grid>
+        <div><div class="uk-card uk-card-default uk-card-body uk-text-center"><img src="assets/network-diagram.webp" alt="Anticipación" style="height:92px; object-fit:contain;"><h3 class="uk-h4">Anticipación</h3><p class="uk-text-small">Leer señales débiles antes de que se vuelvan crisis.</p></div></div>
+        <div><div class="uk-card uk-card-default uk-card-body uk-text-center"><img src="assets/blue-wave.webp" alt="Agilidad" style="height:92px; object-fit:cover;"><h3 class="uk-h4">Agilidad</h3><p class="uk-text-small">Moverse con inteligencia, dirección y propósito.</p></div></div>
+        <div><div class="uk-card uk-card-default uk-card-body uk-text-center"><img src="assets/blue-spiral-right.webp" alt="Aprendizaje" style="height:92px; object-fit:cover;"><h3 class="uk-h4">Aprendizaje</h3><p class="uk-text-small">Convertir conocimiento en ventaja evolutiva sostenible.</p></div></div>
+        <div><div class="uk-card uk-card-default uk-card-body uk-text-center"><img src="assets/botanical-triadic.webp" alt="Adecuación" style="height:92px; object-fit:cover;"><h3 class="uk-h4">Adecuación</h3><p class="uk-text-small">Alinear estructuras, procesos y cultura con el entorno real.</p></div></div>
+        <div><div class="uk-card uk-card-default uk-card-body uk-text-center"><img src="assets/blue-ring.webp" alt="Antifragilidad" style="height:92px; object-fit:cover;"><h3 class="uk-h4">Antifragilidad</h3><p class="uk-text-small">Fortalecerse en la presión y aprender del shock adaptativo.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="libro" class="uk-section uk-section-large" style="background:#fff;">
+    <div class="uk-container">
+      <div class="uk-grid-large uk-flex-middle" uk-grid>
+        <div class="uk-width-1-3@m">
+          <p class="uk-text-meta uk-text-uppercase uk-text-bold" style="color:var(--naranja); letter-spacing:.12em;">Qué encontrarás en el libro</p>
+          <h2 class="uk-heading-medium">Seis entradas para leer el colapso antes de que sea evidente</h2>
+          <p class="uk-text-lead">Complejidad, adaptabilidad e innovación tratadas como capacidades vivas, no como consignas de gestión.</p>
+        </div>
+        <div class="uk-width-2-3@m">
+          <div class="uk-child-width-1-3@m uk-child-width-1-2@s uk-grid-match uk-grid-small" uk-grid>
+            <div><div class="uk-card uk-card-body uk-height-1-1" style="background:var(--marfil);"><img src="assets/blue-organic-spiral.webp" alt="Complejidad" style="height:130px; width:100%; object-fit:cover;"><h3 class="uk-h4">Complejidad y colapso organizacional</h3></div></div>
+            <div><div class="uk-card uk-card-body uk-height-1-1" style="background:var(--marfil);"><img src="assets/blue-triadic.webp" alt="Adaptabilidad" style="height:130px; width:100%; object-fit:cover;"><h3 class="uk-h4">Adaptabilidad como ventaja competitiva</h3></div></div>
+            <div><div class="uk-card uk-card-body uk-height-1-1" style="background:var(--marfil);"><img src="assets/blue-frame.webp" alt="Organizaciones mecánicas" style="height:130px; width:100%; object-fit:cover;"><h3 class="uk-h4">El error de las organizaciones mecánicas</h3></div></div>
+            <div><div class="uk-card uk-card-body uk-height-1-1" style="background:var(--marfil);"><img src="assets/network-diagram.webp" alt="Inteligencia adaptativa" style="height:130px; width:100%; object-fit:cover;"><h3 class="uk-h4">Inteligencia adaptativa</h3></div></div>
+            <div><div class="uk-card uk-card-body uk-height-1-1" style="background:var(--marfil);"><img src="assets/blue-leaf.webp" alt="Innovación" style="height:130px; width:100%; object-fit:cover;"><h3 class="uk-h4">Innovación en contextos inciertos</h3></div></div>
+            <div><div class="uk-card uk-card-body uk-height-1-1" style="background:var(--marfil);"><img src="assets/book-open.webp" alt="Interior del libro" style="height:130px; width:100%; object-fit:cover;"><h3 class="uk-h4">Casos reales en Europa y América Latina</h3></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="presentaciones" class="uk-section uk-section-large uk-light" style="background:linear-gradient(90deg, rgba(0,31,63,.98), rgba(0,31,63,.88)), url('assets/blue-nautilus.webp') right center / cover no-repeat;">
+    <div class="uk-container">
+      <div class="uk-grid-large" uk-grid>
+        <div class="uk-width-1-3@m">
+          <p class="uk-text-meta uk-text-uppercase uk-text-bold" style="color:#ffb070; letter-spacing:.12em;">Presentaciones del libro</p>
+          <h2 class="uk-heading-medium" style="color:#fff;">Conversaciones para leer lo que ya cambió.</h2>
+          <p>Encuentros sobre complejidad, adaptabilidad y organizaciones.</p>
+        </div>
+        <div class="uk-width-2-3@m">
+          <div class="uk-child-width-1-3@m uk-grid-small uk-grid-match" uk-grid>
+            <div>
+              <div class="uk-card uk-card-body uk-height-1-1" style="background:rgba(255,255,255,.96); color:var(--azul-profundo);">
+                <p class="uk-text-meta uk-text-uppercase uk-text-bold" style="color:var(--naranja);">Próxima presentación</p>
+                <h3>Casa del Libro</h3>
+                <p class="uk-text-bold">2 de julio · 19:00</p>
+                <p>Conversación sobre complejidad, adaptabilidad y organizaciones.</p>
+                <p class="uk-text-small uk-text-muted">Aforo por confirmar.</p>
+                <a class="uk-button uk-button-primary" href="#" style="background:var(--azul-profundo); color:#fff;">Reservar plaza</a>
+              </div>
+            </div>
+            <div>
+              <div class="uk-card uk-card-body uk-height-1-1" style="background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.24);">
+                <p class="uk-text-meta uk-text-uppercase uk-text-bold" style="color:#ffb070;">Nueva fecha</p>
+                <h3 style="color:#fff;">Barcelona</h3>
+                <p class="uk-text-bold">Fecha por confirmar</p>
+                <p>Encuentro con comunidad, organizaciones y medios especializados.</p>
+                <a class="uk-button uk-button-default" href="#comunidad" style="color:#fff; border-color:#fff;">Recibir aviso</a>
+              </div>
+            </div>
+            <div>
+              <div class="uk-card uk-card-body uk-height-1-1" style="background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.24);">
+                <p class="uk-text-meta uk-text-uppercase uk-text-bold" style="color:#ffb070;">Nueva fecha</p>
+                <h3 style="color:#fff;">Santiago</h3>
+                <p class="uk-text-bold">Fecha por confirmar</p>
+                <p>Presentación orientada a empresas, instituciones y equipos directivos.</p>
+                <a class="uk-button uk-button-default" href="#comunidad" style="color:#fff; border-color:#fff;">Recibir aviso</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="test" class="uk-section uk-section-large" style="background:var(--marfil); background-image:linear-gradient(90deg, rgba(243,239,232,.98), rgba(243,239,232,.78)), url('assets/white-triadic.webp'); background-size:cover; background-position:right center;">
+    <div class="uk-container uk-container-small uk-text-center">
+      <p class="uk-text-meta uk-text-uppercase uk-text-bold" style="color:var(--naranja); letter-spacing:.12em;">Experiencia interactiva</p>
+      <h2 class="uk-heading-medium">¿Tu organización está entrando en obsolescencia adaptativa?</h2>
+      <p class="uk-text-lead">Haz el test rápido y descubre tu nivel de riesgo.</p>
+      <div class="uk-flex uk-flex-center uk-flex-wrap uk-grid-small" uk-grid>
+        <div><a href="#" class="uk-button uk-button-primary uk-button-large" style="background:var(--azul-profundo); color:#fff;">Hacer test</a></div>
+        <div><a href="#comunidad" class="uk-button uk-button-default uk-button-large">Recibir reflexiones</a></div>
+      </div>
+      <p class="uk-margin-medium-top uk-text-muted">El resultado puede abrir una ruta hacia diagnóstico, talleres, comunidad, newsletter o IAO.</p>
+    </div>
+  </section>
+
+  <section id="autor" class="uk-section uk-section-large" style="background:linear-gradient(90deg, var(--azul-profundo) 0%, var(--azul-profundo) 42%, var(--papel) 42%, var(--papel) 100%);">
+    <div class="uk-container">
+      <div class="uk-grid-collapse uk-flex-middle" uk-grid>
+        <div class="uk-width-1-3@m uk-light uk-padding-large">
+          <p class="uk-text-meta uk-text-uppercase uk-text-bold" style="color:#ffb070; letter-spacing:.12em;">Sobre el autor</p>
+          <h2 style="color:#fff;">Marcelo Lasagna</h2>
+          <p>PhD (c) en Ciencias Políticas.</p>
+          <p>Fundador de Protea Becoming Adaptive y cofundador de Lead To Change Chile.</p>
+          <p>Desde hace más de 30 años acompaña procesos de transformación e innovación en organizaciones públicas y privadas de Europa y América Latina.</p>
+          <p>Especialista en sistemas complejos adaptativos aplicados a organizaciones.</p>
+          <a class="uk-button uk-button-text" href="#">LinkedIn</a>
+        </div>
+        <div class="uk-width-1-3@m uk-text-center">
+          <img src="assets/author.webp" alt="Marcelo Lasagna" style="max-height:560px; width:100%; object-fit:cover; object-position:center top;">
+        </div>
+        <div class="uk-width-1-3@m uk-padding-large">
+          <blockquote class="uk-text-large">
+            <p>“La adaptabilidad no es una opción. Es la única ventaja sostenible.”</p>
+          </blockquote>
+          <hr>
+          <img src="assets/book-open.webp" alt="Libro abierto con diagramas interiores" class="uk-box-shadow-medium">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="uk-section" style="background:#fff;">
+    <div class="uk-container">
+      <div class="uk-grid-large" uk-grid>
+        <div class="uk-width-1-3@m">
+          <p class="uk-text-meta uk-text-uppercase uk-text-bold" style="color:var(--naranja); letter-spacing:.12em;">Apoyos editoriales</p>
+          <h2>Voces breves para reforzar autoridad.</h2>
+          <p class="uk-text-muted">Seleccionar tres citas del libro: empresarial, académica e institucional.</p>
+        </div>
+        <div class="uk-width-2-3@m">
+          <div class="uk-child-width-1-3@m uk-grid-small uk-grid-match" uk-grid>
+            <div><div class="uk-card uk-card-body uk-height-1-1" style="background:var(--marfil);"><p class="uk-text-large">Cita breve por seleccionar del libro.</p><p class="uk-text-bold">Batet</p></div></div>
+            <div><div class="uk-card uk-card-body uk-height-1-1" style="background:var(--marfil);"><p class="uk-text-large">Cita breve por seleccionar del libro.</p><p class="uk-text-bold">Jordi Marín</p></div></div>
+            <div><div class="uk-card uk-card-body uk-height-1-1" style="background:var(--marfil);"><p class="uk-text-large">Cita breve por seleccionar del libro.</p><p class="uk-text-bold">Oscar</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="comunidad" class="uk-section uk-section-large" style="background:linear-gradient(90deg, rgba(243,239,232,.98), rgba(243,239,232,.84)), url('assets/white-leaf.webp') right center / contain no-repeat;">
+    <div class="uk-container">
+      <div class="uk-grid-large uk-flex-middle" uk-grid>
+        <div class="uk-width-1-2@m">
+          <p class="uk-text-meta uk-text-uppercase uk-text-bold" style="color:var(--naranja); letter-spacing:.12em;">Newsletter / comunidad</p>
+          <h2 class="uk-heading-medium">El efecto Colibrí</h2>
+          <p class="uk-text-lead">Reflexiones sobre complejidad, adaptabilidad e innovación en tiempos inciertos.</p>
+        </div>
+        <div class="uk-width-1-2@m">
+          <form class="uk-grid-small" uk-grid>
+            <div class="uk-width-expand@s"><input class="uk-input uk-form-large" type="email" placeholder="correo"></div>
+            <div class="uk-width-auto@s"><button class="uk-button uk-button-primary uk-button-large" type="button" style="background:var(--azul-profundo); color:#fff;">Unirme</button></div>
+          </form>
+          <p class="uk-text-small uk-text-muted">Comunidad, conferencias, labs e IAO como continuidad natural del libro.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="uk-section uk-section-small uk-light" style="background:var(--azul-profundo);">
+  <div class="uk-container">
+    <div class="uk-grid-large uk-flex-middle" uk-grid>
+      <div class="uk-width-1-4@m"><img src="assets/logo.webp" alt="Protea" width="150" style="filter:brightness(0) invert(1);"></div>
+      <div class="uk-width-1-2@m">
+        <ul class="uk-subnav uk-subnav-divider" uk-margin>
+          <li><a href="#libro">Libro</a></li>
+          <li><a href="#presentaciones">Eventos</a></li>
+          <li><a href="#inicio">Protea</a></li>
+          <li><a href="#autor">LinkedIn</a></li>
+          <li><a href="#comunidad">Contacto</a></li>
+          <li><a href="#">Prensa / media kit</a></li>
+        </ul>
+      </div>
+      <div class="uk-width-1-4@m uk-text-right@m"><a class="uk-button uk-button-default uk-button-small" href="#" style="color:#fff; border-color:#fff;">Comprar libro</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.21.16/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.21.16/dist/js/uikit-icons.min.js"></script>
+</body>
+</html>
