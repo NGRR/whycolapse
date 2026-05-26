@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aminoácidos adaptativos · V3 móvil</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="hud panel">
+      <div class="hud-left">
+        <div class="metric"><span class="label">SALUD</span><div class="value" id="healthValue">80</div><div class="bar"><i id="healthBar"></i></div></div>
+        <div class="metric"><span class="label">ENERGÍA</span><div class="value" id="energyValue">60</div><div class="bar"><i id="energyBar"></i></div></div>
+        <div class="metric"><span class="label">COLAPSO</span><div class="value danger" id="collapseValue">10</div><div class="bar danger"><i id="collapseBar"></i></div></div>
+      </div>
+      <div class="hud-right">
+        <div class="clockWrap"><span class="label">RETO</span><div class="clock" id="clock">03:00</div></div>
+        <div class="statusText" id="statusText">Pulsa iniciar. Usa Anticipación para desenmascarar señales antes de que maduren.</div>
+      </div>
+    </header>
+
+    <main class="stage panel" id="stage">
+      <canvas id="bg"></canvas>
+      <svg id="links" aria-hidden="true">
+        <defs>
+          <linearGradient id="mixLine" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#7fd0ff"/>
+            <stop offset="52%" stop-color="#7fd0ff"/>
+            <stop offset="100%" stop-color="#ff9f36"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <div class="organism" id="organism">
+        <div class="coreInner"></div>
+        <div class="coreLabel">ORGANISMO</div>
+      </div>
+      <div class="entities" id="entities"></div>
+      <div class="floaters" id="floaters"></div>
+      <div class="memoryPanel" id="memoryPanel">
+        <aside class="memoryCard" id="memoryCard">
+          <div>
+            <h2>MEMORIA ADAPTATIVA</h2>
+            <p id="memoryIntro">Al terminar el reto, selecciona un punto naranja para leer qué ocurrió, cuándo ocurrió y cómo fue resuelto.</p>
+          </div>
+          <div class="memoryDetails" id="memoryDetails"></div>
+          <div class="memoryActions">
+            <button id="clearMemorySelectionBtn">LIMPIAR SELECCIÓN</button>
+            <button id="restartMemoryBtn">REINICIAR CICLO</button>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="controls panel">
+      <div class="buttons">
+        <button id="startBtn">INICIAR RETO</button>
+        <button id="resetBtn">REINICIAR</button>
+      </div>
+      <div class="legend">
+        <span><i class="legendSwatch gray"></i> no útil</span>
+        <span><i class="legendSwatch blue"></i> útil, falta otro</span>
+        <span><i class="legendSwatch mix"></i> combinación correcta</span>
+      </div>
+    </footer>
+  </div>
+<script src="app.js"></script>
+</body>
+</html>
