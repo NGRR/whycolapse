@@ -1,61 +1,26 @@
-# Aminoácidos adaptativos · V2
+# Aminoácidos adaptativos · V2.9
 
-Ruta sugerida dentro del repo:
-
-```txt
-whycolapse/prototipos/aminoacidos/v2-adaptativos/
-```
-
-## Concepto
-
-Prototipo corto y simple basado en cinco aminoácidos adaptativos:
-
-- Anticipación
-- Agilidad
-- Adecuación
-- Aprendizaje
-- Antifragilidad
-
-La interacción central no está en mover nodos por moverlos, sino en sostener conectores frágiles. Los eventos aparecen sobre los conectores y el usuario aplica energías de los aminoácidos para reparar, anticipar, ajustar, memorizar o transformar crisis.
-
-## Archivos
+Ruta sugerida en repo:
 
 ```txt
-index.html
-styles.css
-app.js
-README.md
+whycolapse/prototipos/aminoacidos/v2.9-memoria-adaptativa/
 ```
 
-## Uso
+## Qué cambia esta versión
 
-Abrir `index.html` directamente en navegador o publicar la carpeta como página estática.
+- elimina el brief como modal de puntaje;
+- al terminar el reto se activa un modo de lectura integrado en la misma escena;
+- los puntos naranjos funcionan como memorias interactivas;
+- cada memoria muestra: evento, momento, resolución aplicada, solución más efectiva, efectividad y lectura conceptual;
+- los vínculos de memoria permanecen conectados al organismo para mostrar que el sistema no sólo sobrevivió, sino que dejó aprendizaje visible.
 
-## Mecánica base
+## Uso breve
 
-1. Arrastrar nodos para cambiar tensión de la red.
-2. Hacer clic en un aminoácido para seleccionar su energía.
-3. Hacer clic sobre un conector o evento para aplicar energía.
-4. Mantener estabilidad alta y colapso bajo.
-5. Usar `Reto corto` para sobrevivir a cinco eventos.
+1. Pulsa **INICIAR RETO**.
+2. Resuelve eventos con el aminoácido principal y su combinación.
+3. Al terminar, selecciona los puntos naranjos para leer la memoria adaptativa del ciclo.
 
-## Energías
 
-| Aminoácido | Energía | Efecto |
-|---|---|---|
-| Anticipación | Señal | ralentiza eventos |
-| Agilidad | Impulso | repara daño inmediato |
-| Adecuación | Ajuste | reduce tensión espacial |
-| Aprendizaje | Memoria | fortalece resistencia futura |
-| Antifragilidad | Transformación | convierte crisis intensa en fortalecimiento |
+## Patch 2.9.1
 
-## Criterio visual
-
-Mood plano, sin logo ni marca explícita:
-
-- marfil cálido,
-- azul eléctrico,
-- naranja vivo,
-- grafito,
-- líneas técnicas,
-- círculos y nodos limpios.
+- Corrige el bug visual donde los puntos de memoria heredaban estilos globales de botón y se convertían en óvalos grandes.
